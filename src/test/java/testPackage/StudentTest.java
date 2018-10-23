@@ -77,11 +77,11 @@ public class StudentTest {
     @Test
     public void testCourse()
     {
-        ArrayList<Module> testModuleList = new ArrayList<>();
+
 
         LocalDate testStartDate = new LocalDate(2018,06,10);
         LocalDate testEndDate = new LocalDate(2019,01,01);
-        Course testCourse = new Course("name", testModuleList,testStartDate,testEndDate);
+        Course testCourse = new Course("name", testStartDate,testEndDate);
         testStudent1.setEnrolledCourse(testCourse);
         Course expectedCourse = testCourse;
         Course actualCourse = testStudent1.getEnrolledCourse();
