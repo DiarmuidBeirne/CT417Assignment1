@@ -17,10 +17,10 @@ public class Module {
     private int moduleId;
     private ArrayList<Student> students;
 
-    public Module(String moduleName, int moduleId, ArrayList<Student> students) {
+    public Module(String moduleName, int moduleId) {
         setModuleName(moduleName);
         setModuleId(moduleId);
-        setStudents(students);
+        students = new ArrayList<Student>();
     }
 
     public String getModuleName() {
@@ -43,8 +43,13 @@ public class Module {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+
+
+
+    //adds a new student to the module
+    public void addStudent(Student newStudent) {
+        this.students.add(newStudent);
+
     }
 
 

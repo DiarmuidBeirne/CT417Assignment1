@@ -32,7 +32,7 @@ public class Student {
         this.setDateOfBirth(dateOfBirth);
         this.setStudentId(studentId);
         this.setAge(Years.yearsBetween(dateOfBirth, LocalDate.now()).getYears());
-        
+        this.moduleList = new ArrayList<>(); //creates an empty moduleList
     }
 
     public String getUsername() {
@@ -75,6 +75,8 @@ public class Student {
     public ArrayList<Module> getModuleList() {
         return moduleList;
     }
+
+    public void addModule(Module newModule) {moduleList.add(newModule);}
 
     public void setModuleList(ArrayList<Module> moduleList) {
         this.moduleList = moduleList;

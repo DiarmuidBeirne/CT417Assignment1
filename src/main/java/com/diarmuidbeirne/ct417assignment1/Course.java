@@ -6,7 +6,8 @@
 package com.diarmuidbeirne.ct417assignment1;
 
 
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
 
@@ -18,10 +19,10 @@ import java.util.ArrayList;
 public class Course {
     private String courseName;
     private ArrayList<Module> modules;
-    private DateTime startDate;
-    private DateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
-    public Course(String courseName, ArrayList<Module> modules, DateTime startDate, DateTime endDate) {
+    public Course(String courseName, ArrayList<Module> modules, LocalDate startDate, LocalDate endDate) {
         setCourseName(courseName);
         setModules(modules);
         setStartDate(startDate);
@@ -44,19 +45,19 @@ public class Course {
         this.modules = modules;
     }
 
-    public DateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(DateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public DateTime getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(DateTime endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 }
