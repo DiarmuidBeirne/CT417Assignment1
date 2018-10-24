@@ -42,6 +42,8 @@ public class Course {
         return modules;
     }
 
+    public void addModule(Module m){ modules.add(m);}
+
     public void setModuleList(ArrayList<Module> modules) {
         this.modules = modules;
     }
