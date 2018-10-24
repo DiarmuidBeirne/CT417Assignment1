@@ -16,6 +16,8 @@ public class Module {
     private String moduleName;
     private int moduleId;
     private ArrayList<Student> students;
+    private ArrayList<Course> courses;
+
 
 
 
@@ -23,6 +25,7 @@ public class Module {
         setModuleName(moduleName);
         setModuleId(moduleId);
         students = new ArrayList<Student>();
+        courses = new ArrayList<>();
     }
 
     public String getModuleName() {
@@ -49,6 +52,18 @@ public class Module {
         this.students = students;
     }
 
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(ArrayList<Course> courses) {
+        this.courses = courses;
+    }
+
+    public void addCourse(Course course) {
+
+        this.courses.add(course);
+    }
 
     //adds a new student to the student ArrayList
     public void addStudent(Student newStudent) {

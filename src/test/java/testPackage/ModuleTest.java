@@ -1,8 +1,12 @@
 package testPackage;
 
+import com.diarmuidbeirne.ct417assignment1.Course;
 import com.diarmuidbeirne.ct417assignment1.Module;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -45,6 +49,20 @@ public class ModuleTest {
         int actualResult = testModule.getModuleId();
     }
 
-     
+    @Test
+    public void addCourse() throws Exception {
+        org.joda.time.LocalDate testStartDate = new org.joda.time.LocalDate(2018,06,10);
+        org.joda.time.LocalDate testEndDate = new org.joda.time.LocalDate(2019,01,01);
+        Course testCourse = new Course("testCourse", testStartDate,testEndDate);
+        testModule.addCourse(testCourse);
+        ArrayList<Course> expectedResult = new ArrayList<>();
+        expectedResult.add(testCourse);
+        ArrayList<Course> actualResult = testModule.getCourses();
+
+        assertEquals(expectedResult,actualResult);
+
+    }
+
+
 
 }
